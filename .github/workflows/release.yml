@@ -29,9 +29,9 @@ jobs:
 
       - name: Create zipped release package
         run: |
-          mkdir neosaki
-          cp -r static/ views/ LICENSE neosaki -t sakisafe/
-          zip -r release/neosaki.zip neosaki/
+          mkdir release
+          cp -r static/ views/ LICENSE neosaki -t release/
+          zip -r release/neosaki.zip release/
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v1
