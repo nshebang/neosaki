@@ -1,0 +1,151 @@
+html {
+  color-scheme: dark;
+}
+
+body {
+  max-width: 700px;
+}
+
+p {
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.rules {
+  text-align: justify;
+}
+
+code {
+  background: #111014;
+  font-family: monospace;
+  color: #e3e3e3;
+  padding: 2px;
+}
+
+.darker {
+  background-color: #000 !important;
+}
+
+.sakilogo {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.pink {
+  color: #ff1638;
+}
+
+.yellow {
+  color: #eafc5b;
+}
+
+.ltpurple {
+  color: #8569d1;
+}
+
+body, select, textarea {
+	color: #e1d9fa;
+	font-size: 10pt;
+  line-height: 1.65em;
+  letter-spacing: -0.015em;
+  font-family: monospace;
+}
+
+body {
+  margin: auto;
+  max-width: 800px;
+  background-color: #161421;
+}
+
+input[type="file"] {
+  min-width: 50%;
+  max-width: 50%;
+  border: 2px dotted #33313b;
+  padding: 2px 4px 4px 4px;
+}
+
+input[type="file"]:hover {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  max-width: 400px;
+  text-align: justify;
+  margin: 10px 10% 10px 10%;
+  font-size: 9pt;
+}
+
+.upload {
+  border: 2px dotted #33313b;
+  padding: 1em;
+  margin: 10px;
+}
+
+.uploader {
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #111014;
+  text-align: center;
+}
+
+.result {
+  margin: 2px;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px dotted #33313b;
+}
+
+h1, h2 {
+  color: #e3e3e3;
+  text-align: center;
+}
+
+h2, h4 {
+  margin: 10px 10px 10px 10px;
+}
+
+a:link, a:visited {
+  color: #60bdff;
+}
+
+a:hover {
+  color: #ff1638; 
+}
+
+input[type="submit"],
+input::file-selector-button {
+  margin-top: 4px;
+  background-color: #342f52;
+  border: none;
+  border-top: 2px solid #b572fc;
+  border-left: 2px solid #b572fc;
+  border-bottom: 2px solid #3d1d52;
+  border-right: 2px solid #3d1d52;
+  border-radius: 2px;
+  font-size: 11pt;
+  transition: .2s;
+}
+
+input[type="submit"]:hover,
+input::file-selector-button:hover {
+  cursor: pointer;
+  background-color: #2f3952;
+  border: none;
+  border-top: 2px solid #6363ff;
+  border-left: 2px solid #6363ff;
+  border-bottom: 2px solid #132236;
+  border-right: 2px solid #132236;
+  border-radius: 2px;
+}
+

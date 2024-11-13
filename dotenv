@@ -1,0 +1,2 @@
+PORT=8000
+CSP_HEADER="default-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-ancestors 'self';"

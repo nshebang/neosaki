@@ -1,0 +1,45 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.23'
+
+      - name: Install dependencies
+        run: |
+          go mod tidy
+          go mod vendor
+
+      - name: Build neosaki binary
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o neosaki ./uploader/main.go
+
+      - name: Create zipped release package
+        run: |
+          mkdir neosaki
+          cp -r static/ views/ LICENSE neosaki -t sakisafe/
+          zip -r release/neosaki.zip neosaki/
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            release/neosaki.zip
+            release/neosaki
+          tag_name: ${{ github.ref_name }}
+          prerelease: false 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

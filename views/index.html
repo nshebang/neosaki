@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sakisafe@ichoria★org</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <h1>
+    <span class="pink">ichoria</span>
+    <span class="yellow">★</span>
+    <span class="ltpurple">sakisafe</span>
+  </h1>
+  <h2>alojamiento instantáneo de archivos y texto plano</h2>
+  <div class="sakilogo">
+    <img src="/static/saki.png">
+  </div>
+  <div class="uploader">
+    <h2>Subir archivos</h2>
+    <form enctype="multipart/form-data" method="post" action="/upload">
+      <input type="file" name="files" size="30" multiple>
+      <input type="submit" value="subir archivo">
+    </form>
+    <h4>Reglas básicas</h4>
+    <p class="rules">
+      Está <b>absolutamente prohibido</b> subir material ilegal o 
+      para adultos (<a href="https://es.wikipedia.org/wiki/NSFW"
+      target="_blank">NSFW</a>)<br>Se pueden subir máximo tres archivos
+      por subida, 100MB a repartir entre cada uno. Deberías leer los 
+      <a href="https://ichoria.org/saki-tos.txt"
+      target="_blank">términos de uso</a>.
+    </p>
+  </div>
+  <h2>... o sube algo desde la terminal:</h2>
+  <p>Usando cURL:</p>
+  <p><code>curl -F 'files=@ejemplo.png' {{.Host}}</code></p>
+  <p>Subir múltiples archivos:</p>
+  <p><code>
+    curl -F 'files=@ejemplo1.png'
+    -F 'files=@ejemplo2.pdf' {{.Host}}
+  </code></p>
+  <p>Subir texto plano directamente:</p>
+  <p><code>curl -F 'files=@-' {{.Host}}</code></p>
+  <hr>
+  <p>
+    Neosaki <b>v{{.Version}}</b> •
+    <a href="https://github.com/nshebang/neosaki" target="_blank">
+      GitHub
+    </a>
+  </p>
+</body>
+</html>
