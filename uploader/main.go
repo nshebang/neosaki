@@ -34,11 +34,7 @@ var users = make(map[string]*UserInfo)
 var mu sync.Mutex
 
 func getFullHostURL(c *gin.Context) string {
-	scheme := "http"
-	if c.Request.TLS != nil {
-		scheme = "https"
-	}
-
+	scheme := "https"
 	host := c.Request.Host 
 
 	return scheme + "://" + host
