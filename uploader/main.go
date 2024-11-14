@@ -21,7 +21,7 @@ import (
 	"sync"
 )
 
-const VERSION = "1.0.0"
+const VERSION = "1.0.1"
 
 var bannedIPs []string
 var bannedMimes []string
