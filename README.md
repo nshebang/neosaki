@@ -66,7 +66,8 @@ the Neosaki directory and that's it.
 
 ### Is this compatible with sakisafecli?
 
-Probably not. You can use cURL instead.
+[According to the creator of Sakisafe himself](https://github.com/nshebang/neosaki/issues/1),
+sakisafecli should support uploading files to Neosaki.
 
 ### Can I enable CORS?
 
